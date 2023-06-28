@@ -48,6 +48,29 @@ local function setupPacker()
 		print("LOADING: vim-fugitive")
 		use('tpope/vim-fugitive')
 		print("LOADED: vim-fugitive")
+
+		print("LOADING: lsp-zer0")
+		use {
+			'vonheikemen/lsp-zero.nvim',
+			branch = 'v2.x',
+			requires = {
+				-- lsp support
+				{'neovim/nvim-lspconfig'},             -- required
+				{                                      -- optional
+				'williamboman/mason.nvim',
+				run = function()
+					pcall(vim.cmd, 'masonupdate')
+				end,
+				},
+				{'williamboman/mason-lspconfig.nvim'}, -- optional
+
+				-- autocompletion
+				{'hrsh7th/nvim-cmp'},     -- required
+				{'hrsh7th/cmp-nvim-lsp'}, -- required
+				{'l3mon4d3/luasnip'},     -- required
+			}
+		}
+		print("LOADED: lsp-zer0")
 	end)
 end
 
