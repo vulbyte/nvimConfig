@@ -79,6 +79,21 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
     url = "https://github.com/hrsh7th/cmp-nvim-lsp"
   },
+  colorizer = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/colorizer",
+    url = "https://github.com/lilydjwg/colorizer"
+  },
+  ["emmet-vim"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/emmet-vim",
+    url = "https://github.com/mattn/emmet-vim"
+  },
+  ["feline.nvim"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/feline.nvim",
+    url = "https://github.com/freddiehaddad/feline.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/harpoon",
@@ -103,6 +118,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
+  },
+  nerdtree = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/nerdtree",
+    url = "https://github.com/preservim/nerdtree"
+  },
+  nightfox = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/nightfox",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -134,10 +159,10 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
-  ["rose-pine"] = {
+  ripgrep = {
     loaded = true,
-    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/rose-pine",
-    url = "https://github.com/rose-pine/neovim"
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/ripgrep",
+    url = "https://github.com/BurntSushi/ripgrep"
   },
   ["telescope.nvim"] = {
     loaded = true,
@@ -149,10 +174,40 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-closetag"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-closetag",
+    url = "https://github.com/alvan/vim-closetag"
+  },
+  ["vim-devicons"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-devicons",
+    url = "https://github.com/ryanoasis/vim-devicons"
+  },
+  ["vim-floaterm"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-floaterm",
+    url = "https://github.com/voldikss/vim-floaterm"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  ["vim-rainbow"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-rainbow",
+    url = "https://github.com/frazrepo/vim-rainbow"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-visual-multi"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-visual-multi",
+    url = "https://github.com/mg979/vim-visual-multi"
   }
 }
 

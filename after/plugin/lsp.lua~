@@ -1,5 +1,4 @@
 print('LOADING: .nvim/after/plugin/lsp.lua')
-        print("LOADING: vim-floaterm")
 	local lsp = require('lsp-zero').preset({})
 
 	lsp.on_attach(function(client, bufnr)

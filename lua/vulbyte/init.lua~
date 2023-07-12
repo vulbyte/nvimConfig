@@ -9,3 +9,5 @@ require('vulbyte.set')
 
 print('LOADED: ./nvim/lua/vulbute/init.lua')
 
+print('test1')
+print('test2')

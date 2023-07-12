@@ -14,7 +14,7 @@ vim.keymap.set('n', 'N', 'Nzzzv') -- searching around
 
 vim.keymap.set('x', '<leader>p', "\"_dp") -- keeps copied thing in buffer
 
-vim.keymap.set("n", '<leader>y', "\"+y") -- yanks to system clipboard
+vim.keymap.set("v", '<leader>y', "\"+y") -- yanks to system clipboard
 
 --below allows you to swap projects via tmux (different sessions)
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
@@ -25,12 +25,11 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
+
 --replaces selected word with new word in whole document/file omg <3
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
---converts current file to an executable
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
-
+--sets emmet hotkey to <C-(var)>,
+vim.g.user_emmet_leader_key = "<C-Y>"
 
 print('LOADED: ./nvim/luavulbyte/remap.lua')

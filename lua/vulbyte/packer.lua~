@@ -145,7 +145,7 @@ local function setupPacker()
 
         --creates a terminal where instead of needing to create a split you
         --can instead simply use an overlay term to save space
-        --(great for test servers)
+        --(great for test servers
         print("LOADING: vim-floaterm")
         use('voldikss/vim-floaterm')
         print("LOADING: vim-floaterm")

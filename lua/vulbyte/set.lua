@@ -1,5 +1,7 @@
 --vim.opt.guicursor = "" --makes cursor thicc in INSERT mode
 
+vim.opt.termguicolors = true
+
 vim.opt.nu = true --line numbers
 vim.opt.rnu = true --relative line numbers
 
