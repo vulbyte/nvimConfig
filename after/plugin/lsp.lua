@@ -14,5 +14,19 @@ print('LOADING: .nvim/after/plugin/lsp.lua')
     vim.o.updatetime = 250
     vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
+    --require('lspconfig').zls.setup {
+    --    settings = {
+    --        zls = {
+    --            filetypes = {
+    --                diagnostics = {
+    --                    --this clears those annoying "trailing white space"
+    --                    --messages
+    --                    ['trailing-space'] = false,
+    --                },
+    --            },
+    --        },
+    --    },
+    --}
+
 	lsp.setup()
 print('LOADED: .nvim/after/plugin/lsp.lua')
