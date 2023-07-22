@@ -8,18 +8,18 @@ print('LOADING: ./nvim/lua/vulbute/packer.lua')
 vim.cmd [[packadd packer.nvim]]
 
 local function setupPacker()
-	print('LOADING: PLACKER & PLUGINS')
+    print('LOADING: PLACKER & PLUGINS')
 
-	return require('packer').startup(function(use)
+    return require('packer').startup(function(use)
         --:PackerSync
-		print('LOADING: packer')
-		-- Packer can manage itself
-		use 'wbthomason/packer.nvim'
-		print('LOADED: packer')
+        print('LOADING: packer')
+        -- Packer can manage itself
+        use 'wbthomason/packer.nvim'
+        print('LOADED: packer')
 
-        -- ALPHABETICALLY SORTED UNLESS SPECIFED 
+        -- ALPHABETICALLY SORTED UNLESS SPECIFED
         -- NOTE: if the plugin starts with the name "vim"
-        --       or "nvim" the plugin will be sorted by 
+        --       or "nvim" the plugin will be sorted by
         --       next name.
         --       ie, "vim-closetags" will be in in the "c"
         --       section.
@@ -27,8 +27,8 @@ local function setupPacker()
         -- A
 
         -- B
-        
-        -- C 
+
+        -- C
 
         --autocloses HTML tags on ">"
         print("LOADING: vim-closetag")
@@ -39,7 +39,7 @@ local function setupPacker()
         print("LOADING: colorizer")
         use("lilydjwg/colorizer")
         print("LOADED: colorizer")
-         
+
         -- D
 
         -- for godot
@@ -74,6 +74,11 @@ local function setupPacker()
         use('voldikss/vim-floaterm')
         print("loading: vim-floaterm")
 
+        --format on save to keep code clean
+        print("LOADING: elentok/format-on-save.nvim")
+        use("elentok/format-on-save.nvim")
+        print("LOADED: elentok/format-on-save.nvim")
+
         --adds :Git commands to nvim
         print("LOADING: vim-fugitive")
         use('tpope/vim-fugitive')
@@ -81,75 +86,74 @@ local function setupPacker()
 
         -- G
 
-        print("LOADING: godot-nvim")
-        use('lommix/godot.nvim')
-        print("LOADED: godot-nvim")
+        --print("LOADING: godot-nvim")
+        --use('lommix/godot.nvim')
+        --print("LOADED: godot-nvim")
 
         -- H
-        
-        --adds harpoon, a tool that lets you save upto 4 scripts, 
+
+        --adds harpoon, a tool that lets you save upto 4 scripts,
         --then you can use h n t or s to bounce between them
         print("LOADING: harpoon")
         use('theprimeagen/harpoon')
         print("LOADED: harpoon")
 
-        -- I 
-        
+        -- I
+
         -- J
-        
-        -- K 
-        
-        -- L 
+
+        -- K
+
+        -- L
 
         --changes statusline to make more readable
         print("LOADING: lightline.nvim")
-        use("itchyny/lightline.vim") 
+        use("itchyny/lightline.vim")
         print("LOADED: lightline.nvim")
 
-        --loads lsp server (code suggestions and errors and stuff
+        -- loads lsp server (code suggestions and errors and stuff
         print("LOADING: lsp-zer0")
         use {
             'vonheikemen/lsp-zero.nvim',
             branch = 'v2.x',
             requires = {
                 -- lsp support
-                {'neovim/nvim-lspconfig'},             -- required
-                {                                      -- optional
-                'williamboman/mason.nvim',
-                run = function()
-                    pcall(vim.cmd, 'masonupdate')
-                end,
-            },
-                {'williamboman/mason-lspconfig.nvim'}, -- optional
+                { 'neovim/nvim-lspconfig' }, -- required
+                {                            -- optional
+                    'williamboman/mason.nvim',
+                    run = function()
+                        pcall(vim.cmd, 'masonupdate')
+                    end,
+                },
+                { 'williamboman/mason-lspconfig.nvim' }, -- optional
 
                 -- autocompletion
-                {'hrsh7th/nvim-cmp'},     -- required
-                {'hrsh7th/cmp-nvim-lsp'}, -- required
-                {'l3mon4d3/luasnip'},     -- required
-            }
+                { 'hrsh7th/nvim-cmp' },     -- required
+                { 'hrsh7th/cmp-nvim-lsp' }, -- required
+                { 'l3mon4d3/luasnip' },     -- required
+            },
         }
-        print("LOADED: lsp-zer0")
 
         -- M
 
-        -- N 
+        -- N
 
         --adds nerdtree support
         print("LOADING: nerdtree")
         use('preservim/nerdtree')
         print("LOADED: nerdtree")
-        
-        -- O 
-        
+
+        -- O
+
         --print("LOADING: omnisharp-roslyn")
         --use('OmniSharp/omnisharp-roslyn')
         --print("LOADED: omnisharp-roslyn")
-        
+
         print("LOADING: omnisharp-vim")
         use('OmniSharp/omnisharp-vim')
         print("LOADED: omnisharp-vim")
 
-        -- P 
+        -- P
 
         --this allows you to see what treesitter sees, helping massively
         --with making stylistic mods to vim
@@ -170,7 +174,7 @@ local function setupPacker()
 
         --finder for inline files
         print("LOADING: ripgrep")
-        use ('BurntSushi/ripgrep')
+        use('BurntSushi/ripgrep')
         print("LOADED: ripgrep")
 
         --for unity development
@@ -184,7 +188,7 @@ local function setupPacker()
         print("LOADING: vim-surrond")
         use('tpope/vim-surround')
         print("LOADED: vim-surround")
-         
+
         -- T
 
         --loads theme rosepine
@@ -195,45 +199,45 @@ local function setupPacker()
         use({ 'EdenEast/nightfox.nvim', as = 'nightfox' })
         vim.cmd('colorscheme carbonfox')
         print('LOADED: THEME')
-         
+
         --fuzzy finder
         print('LOADING: telescope')
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.1',
             -- or                            , branch = '0.1.x',
-            requires = { {'nvim-lua/plenary.nvim'} }
+            requires = { { 'nvim-lua/plenary.nvim' } }
         }
         print('LOADED: telescope')
 
         --syntax highlighting
         print('LOADING: treesitter')
-        use ('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+        use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
         print('LOADED: treesitter')
-        
-        -- U 
+
+        -- U
 
         --vim.keymap.set('n', "<leader>u", vim.cmd.UndotreeToggle)
         --adds undotree using assigned var @:
         print("LOADING: undotree")
         use('mbbill/undotree')
         print("LOADED: undotree")
-         
-        -- V 
-         
+
+        -- V
+
         --adds multi cursor support to vim
         print("LOADING: vim-visual-multi")
         use('mg979/vim-visual-multi')
         print("LOADED: vim-visual-multi")
 
-        -- W 
+        -- W
 
         -- X
-        
+
         -- Y
-        
-        -- Z
-	end)
-end
+
+        --   Z
+    end) --
+end      --
 
 
 setupPacker()
@@ -241,5 +245,5 @@ print('LOADED PLACKER & PLUGINS')
 
 
 
-print('LOADED: ./nvim/lua/vulbute/packer.lua')
+print('LOADED:-- ./nvim/lua/vulbute/packer.lua')
 -- End of configuration file

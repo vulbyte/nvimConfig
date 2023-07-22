@@ -89,6 +89,11 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
   },
+  ["format-on-save.nvim"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/format-on-save.nvim",
+    url = "https://github.com/elentok/format-on-save.nvim"
+  },
   harpoon = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/harpoon",
