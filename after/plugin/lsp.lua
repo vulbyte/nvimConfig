@@ -1,32 +1,34 @@
-print('LOADING: .nvim/after/plugin/lsp.lua')
-        print("LOADING: vim-floaterm")
-	local lsp = require('lsp-zero').preset({})
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded;
 
-	lsp.on_attach(function(client, bufnr)
-		lsp.default_keymaps({buffer = bufnr})
-	end)
+if (printLoadingAndLoaded == true) then print('LOADING: .nvim/after/plugin/lsp.lua') end
+--if (printLoadingAndLoaded == true) then print("LOADING: vim-floaterm") end
+local lsp = require('lsp-zero').preset({})
 
-	-- (Optional) Configure lua language server for neovim
-	require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
+lsp.on_attach(function(client, bufnr)
+	lsp.default_keymaps({ buffer = bufnr })
+end)
 
-    -- You will likely want to reduce updatetime which affects CursorHold
-    -- note: this setting is global and should be set only once
-    vim.o.updatetime = 250
-    vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+-- (Optional) Configure lua language server for neovim
+require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
-    --require('lspconfig').zls.setup {
-    --    settings = {
-    --        zls = {
-    --            filetypes = {
-    --                diagnostics = {
-    --                    --this clears those annoying "trailing white space"
-    --                    --messages
-    --                    ['trailing-space'] = false,
-    --                },
-    --            },
-    --        },
-    --    },
-    --}
+-- You will likely want to reduce updatetime which affects CursorHold
+-- note: this setting is global and should be set only once
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
-	lsp.setup()
-print('LOADED: .nvim/after/plugin/lsp.lua')
+--require('lspconfig').zls.setup {
+--    settings = {
+--        zls = {
+--            filetypes = {
+--                diagnostics = {
+--                    --this clears those annoying "trailing white space"
+--                    --messages
+--                    ['trailing-space'] = false,
+--                },
+--            },
+--        },
+--    },
+--}
+
+lsp.setup()
+if (printLoadingAndLoaded == true) then print('LOADED: .nvim/after/plugin/lsp.lua') end

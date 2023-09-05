@@ -1,7 +1,8 @@
-print('LOADING: ./nvim/after/plugin/fugitive')
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded;
+if (printLoadingAndLoaded == true) then print('lOADING: ./nvim/after/plugin/fugitive') end
 
 
 vim.keymap.set("n", "<leader>gs", vim.cmd.Git)
 
 
-print('LOADED: ./nvim/after/plugin/fugitive')
+if (printLoadingAndLoaded == true) then print('LOADED: ./nvim/after/plugin/fugitive') end

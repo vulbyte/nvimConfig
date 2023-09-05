@@ -1,5 +1,13 @@
-print('LOADING: ./nvim/lua/vulbute/packer.lua')
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded;
 
+if (printLoadingAndLoaded == true) then
+    print('LOADING:./nvim/lua/vulbute/packer.lua')
+end
+
+
+if (printLoadingAndLoaded == true) then
+    print('LOADING:./nvim/lua/vulbute/packer.lua')
+end
 
 
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
@@ -8,14 +16,16 @@ print('LOADING: ./nvim/lua/vulbute/packer.lua')
 vim.cmd [[packadd packer.nvim]]
 
 local function setupPacker()
-    print('LOADING: PLACKER & PLUGINS')
+    if (printLoadingAndLoaded == true) then
+        print('LOADING: PLACKER & PLUGINS')
+    end
 
     return require('packer').startup(function(use)
         --:PackerSync
-        print('LOADING: packer')
+        if (printLoadingAndLoaded == true) then print('LOADING: packer') end
         -- Packer can manage itself
         use 'wbthomason/packer.nvim'
-        print('LOADED: packer')
+        if (printLoadingAndLoaded == true) then print('LOADED: packer') end
 
         -- ALPHABETICALLY SORTED UNLESS SPECIFED
         -- NOTE: if the plugin starts with the name "vim"
@@ -26,38 +36,43 @@ local function setupPacker()
 
         -- A
 
+        -- print("LOADING: 'prabirshrestha/asyncomplete.vim'")
+        -- use('prabirshrestha/asyncomplete.vim')
+        -- use('yami-beta/asyncomplete-omni.vim')
+        -- print("LOADED: 'prabirshrestha/asyncomplete.vim'")
+
         -- B
 
         -- C
 
         --autocloses HTML tags on ">"
-        print("LOADING: vim-closetag")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-closetag") end
         use("alvan/vim-closetag")
-        print("LOADED: vim-closetag")
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-closetag") end
 
         --highlights background color of common rgb values for easier editing
-        print("LOADING: colorizer")
+        if (printLoadingAndLoaded == true) then print("LOADING: colorizer") end
         use("lilydjwg/colorizer")
-        print("LOADED: colorizer")
+        if (printLoadingAndLoaded == true) then print("LOADED: colorizer") end
 
         -- D
 
         -- for godot
-        print("LOADING: nvim-dap")
+        if (printLoadingAndLoaded == true) then print("LOADING: nvim-dap") end
         use("mfussenegger/nvim-dap")
-        print("LOADED: nvim-dap")
+        if (printLoadingAndLoaded == true) then print("LOADED: nvim-dap") end
 
         --adds icons to nerdtree
-        print("LOADING: vim-devicons")
-        use('ryanoasis/vim-devicons')
-        print("LOADED: vim-devicons")
+        --if (printLoadingAndLoaded == true) then print("LOADING: vim-devicons") end
+        --use('ryanoasis/vim-devicons')
+        --if (printLoadingAndLoaded == true) then print("LOADED: vim-devicons") end
 
         -- E
 
         --addes emmet functionality
-        print("LOADING: emmet-vim")
+        if (printLoadingAndLoaded == true) then print("LOADING: emmet-vim") end
         use("mattn/emmet-vim")
-        print("LOADED: emmet-vim")
+        if (printLoadingAndLoaded == true) then print("LOADED: emmet-vim") end
 
         -- F
 
@@ -70,19 +85,19 @@ local function setupPacker()
         --creates a terminal where instead of needing to create a split you
         --can instead simply use an overlay term to save space
         --(great for test servers)
-        print("LOADING: vim-floaterm")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-floaterm") end
         use('voldikss/vim-floaterm')
-        print("loading: vim-floaterm")
+        if (printLoadingAndLoaded == true) then print("loading: vim-floaterm") end
 
         --format on save to keep code clean
-        print("LOADING: elentok/format-on-save.nvim")
+        if (printLoadingAndLoaded == true) then print("LOADING: elentok/format-on-save.nvim") end
         use("elentok/format-on-save.nvim")
-        print("LOADED: elentok/format-on-save.nvim")
+        if (printLoadingAndLoaded == true) then print("LOADED: elentok/format-on-save.nvim") end
 
         --adds :Git commands to nvim
-        print("LOADING: vim-fugitive")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-fugitive") end
         use('tpope/vim-fugitive')
-        print("LOADED: vim-fugitive")
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-fugitive") end
 
         -- G
 
@@ -94,9 +109,9 @@ local function setupPacker()
 
         --adds harpoon, a tool that lets you save upto 4 scripts,
         --then you can use h n t or s to bounce between them
-        print("LOADING: harpoon")
+        if (printLoadingAndLoaded == true) then print("LOADING: harpoon") end
         use('theprimeagen/harpoon')
-        print("LOADED: harpoon")
+        if (printLoadingAndLoaded == true) then print("LOADED: harpoon") end
 
         -- I
 
@@ -107,12 +122,12 @@ local function setupPacker()
         -- L
 
         --changes statusline to make more readable
-        print("LOADING: lightline.nvim")
+        if (printLoadingAndLoaded == true) then print("LOADING: lightline.nvim") end
         use("itchyny/lightline.vim")
-        print("LOADED: lightline.nvim")
+        if (printLoadingAndLoaded == true) then print("LOADED: lightline.nvim") end
 
         -- loads lsp server (code suggestions and errors and stuff
-        print("LOADING: lsp-zer0")
+        if (printLoadingAndLoaded == true) then print("LOADING: lsp-zer0") end
         use {
             'vonheikemen/lsp-zero.nvim',
             branch = 'v2.x',
@@ -139,9 +154,9 @@ local function setupPacker()
         -- N
 
         --adds nerdtree support
-        print("LOADING: nerdtree")
-        use('preservim/nerdtree')
-        print("LOADED: nerdtree")
+        --if (printLoadingAndLoaded == true) then ("LOADING: nerdtree") end
+        --use('preservim/nerdtree')
+        --if (printLoadingAndLoaded == true) then print("LOADED: nerdtree") end
 
         -- O
 
@@ -149,17 +164,17 @@ local function setupPacker()
         --use('OmniSharp/omnisharp-roslyn')
         --print("LOADED: omnisharp-roslyn")
 
-        print("LOADING: omnisharp-vim")
+        if (printLoadingAndLoaded == true) then print("LOADING: omnisharp-vim") end
         use('OmniSharp/omnisharp-vim')
-        print("LOADED: omnisharp-vim")
+        if (printLoadingAndLoaded == true) then print("LOADED: omnisharp-vim") end
 
         -- P
 
         --this allows you to see what treesitter sees, helping massively
         --with making stylistic mods to vim
-        print("LOADING: playground")
+        if (printLoadingAndLoaded == true) then print("LOADING: playground") end
         use('nvim-treesitter/playground')
-        print("LOADED: playground")
+        if (printLoadingAndLoaded == true) then print("LOADED: playground") end
 
         -- Q
 
@@ -168,14 +183,14 @@ local function setupPacker()
         --makes each bracket a different color making it easier to tell
         --which bracket is which
         --THEME MAY OVERRIDE!!!
-        print("LOADING: vim-rainbow")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-rainbow") end
         use("frazrepo/vim-rainbow")
-        print("LOADED: vim-rainbow")
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-rainbow") end
 
         --finder for inline files
-        print("LOADING: ripgrep")
+        if (printLoadingAndLoaded == true) then print("LOADING: ripgrep") end
         use('BurntSushi/ripgrep')
-        print("LOADED: ripgrep")
+        if (printLoadingAndLoaded == true) then print("LOADED: ripgrep") end
 
         --for unity development
         --print("LOADING: roslyn")
@@ -183,51 +198,54 @@ local function setupPacker()
         --print("LOADED: roslyn")
 
         -- S
+        if (printLoadingAndLoaded == true) then print("LOADING: kamykn/spelunker.vim") end
+        use('kamykn/spelunker.vim')
+        if (printLoadingAndLoaded == true) then print("LOADED: kamykn/spelunker.vim") end
 
         -- dds better surrounding (x) support
-        print("LOADING: vim-surrond")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-surrond") end
         use('tpope/vim-surround')
-        print("LOADED: vim-surround")
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-surround") end
 
         -- T
 
         --loads theme rosepine
         --IF YOU CHANGE WILL NEED TO EDIT: "after/plugin/colors.lua"
-        print('LOADING: THEME')
+        if (printLoadingAndLoaded == true) then print('LOADING: THEME') end
         --use({ 'rose-pine/neovim', as = 'rose-pine' })
         --vim.cmd('colorscheme rose-pine')
         use({ 'EdenEast/nightfox.nvim', as = 'nightfox' })
         vim.cmd('colorscheme carbonfox')
-        print('LOADED: THEME')
+        if (printLoadingAndLoaded == true) then print('LOADED: THEME') end
 
         --fuzzy finder
-        print('LOADING: telescope')
+        if (printLoadingAndLoaded == true) then print('LOADING: telescope') end
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.1',
             -- or                            , branch = '0.1.x',
             requires = { { 'nvim-lua/plenary.nvim' } }
         }
-        print('LOADED: telescope')
+        if (printLoadingAndLoaded == true) then print('LOADED: telescope') end
 
         --syntax highlighting
-        print('LOADING: treesitter')
+        if (printLoadingAndLoaded == true) then print('LOADING: treesitter') end
         use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
-        print('LOADED: treesitter')
+        if (printLoadingAndLoaded == true) then print('LOADED: treesitter') end
 
         -- U
 
         --vim.keymap.set('n', "<leader>u", vim.cmd.UndotreeToggle)
         --adds undotree using assigned var @:
-        print("LOADING: undotree")
+        if (printLoadingAndLoaded == true) then print("LOADING: undotree") end
         use('mbbill/undotree')
-        print("LOADED: undotree")
+        if (printLoadingAndLoaded == true) then print("LOADED: undotree") end
 
         -- V
 
         --adds multi cursor support to vim
-        print("LOADING: vim-visual-multi")
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-visual-multi") end
         use('mg979/vim-visual-multi')
-        print("LOADED: vim-visual-multi")
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-visual-multi") end
 
         -- W
 
@@ -241,9 +259,9 @@ end      --
 
 
 setupPacker()
-print('LOADED PLACKER & PLUGINS')
+if (printLoadingAndLoaded == true) then print('LOADED PLACKER & PLUGINS') end
 
 
 
-print('LOADED:-- ./nvim/lua/vulbute/packer.lua')
+if (printLoadingAndLoaded == true) then print('LOADED:-- ./nvim/lua/vulbute/packer.lua') end
 -- End of configuration file

@@ -1,4 +1,22 @@
-io.write('LOADING: ./nvim/init.lua')
+--this is a section for global variables. use this for stuff you wanna save
+--in memory each time you load nvim
+
+-- Set a global variable
+vim.api.nvim_set_var('printLoadingAndLoaded', false)
+
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded;
+
+--warnings either way:
+if (printLoadingAndLoaded == true) then
+	print("printLoadingAndLoaded == true, disable by setting to false")
+end
+if (printLoadingAndLoaded == false) then
+	print("printLoadingAndLoaded == false, enable by setting to true")
+end
+
+if (printLoadingAndLoaded == true) then
+	io.write('LOADING: ./nvim/init.lua')
+end
 
 -- yepp
 require('vulbyte.init')
@@ -9,5 +27,11 @@ vim.g.OmniSharp_server_use_net8 = 0
 
 vim.g.OmniSharp_server_use_mono = 1
 
---io.write("\27[31m\n+++++++++++++++++++++++++++++LOADED: ./nvim/init.lua\n\27[0m")
-print("LOADED: ./nvim/init.lua")
+--io.write("\27[31m\n++++++++++++++o+++++++++++++++LOADED: ./nvim/init.lua\n\27[0m")
+
+if (printLoadingAndLoaded == true) then
+	print("nLOADED: ./nvim/init.lua")
+end
+
+
+return printLoadingAndLoaded

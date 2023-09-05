@@ -1,4 +1,6 @@
-print("LOADING: ./after/plugin/floaterm")
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded
+
+if (printLoadingAndLoaded == true) then print("LOADING: ./after/plugin/floaterm") end
 
 --local function print_after_hotkey()
 --    print("Hotkey pressed!")
@@ -16,7 +18,7 @@ vim.g.floaterm_keymap_toggle = '<leader>ft'
 vim.cmd('nnoremap <silent> <leader>ft :FloatermToggle<CR>')
 
 vim.g.floaterm_keymap_kill = '<leader>fk'
-vim.cmd('nnoremap <silent> <leader>fk :FloatermKill<CR>')
+vim.cmd('nnoremap <silent> <leader>fk :FloatermKillAll<CR>')
 
 
-print("LOADED: ./after/plugin/floaterm")
+if (printLoadingAndLoaded == true) then print("LOADED: ./after/plugin/floaterm") end

@@ -2,7 +2,7 @@
 
 vim.opt.termguicolors = true
 
-vim.opt.nu = true --line numbers
+vim.opt.nu = true  --line numbers
 vim.opt.rnu = true --relative line numbers
 
 vim.opt.tabstop = 4
@@ -15,11 +15,11 @@ vim.opt.smartindent = true
 vim.opt.wrap = true
 
 vim.opt.swapfile = true
-vim.opt.backup = true
+vim.opt.backup = false -- creates backupfiles ending with a "~"
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-vim.opt.hlsearch = true -- all results highlighted	
+vim.opt.hlsearch = true  -- all results highlighted	
 vim.opt.incsearch = true -- incrimental search /<key> * <other key>
 
 vim.opt.scrolloff = 8

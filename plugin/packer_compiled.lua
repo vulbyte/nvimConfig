@@ -124,11 +124,6 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
-  nerdtree = {
-    loaded = true,
-    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/nerdtree",
-    url = "https://github.com/preservim/nerdtree"
-  },
   nightfox = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/nightfox",
@@ -179,6 +174,11 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/ripgrep",
     url = "https://github.com/BurntSushi/ripgrep"
   },
+  ["spelunker.vim"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/spelunker.vim",
+    url = "https://github.com/kamykn/spelunker.vim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/telescope.nvim",
@@ -193,11 +193,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-closetag",
     url = "https://github.com/alvan/vim-closetag"
-  },
-  ["vim-devicons"] = {
-    loaded = true,
-    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/vim-devicons",
-    url = "https://github.com/ryanoasis/vim-devicons"
   },
   ["vim-floaterm"] = {
     loaded = true,

@@ -1,5 +1,7 @@
-print('LOADED: ./nvim/after/plugin/undotree.lua')
+local printLoadingAndLoaded = vim.g.printLoadingAndLoaded
+
+if (printLoadingAndLoaded == true) then print('LOADED: ./nvim/after/plugin/undotree.lua') end
 
 vim.keymap.set('n', "<leader>u", vim.cmd.UndotreeToggle)
 
-print('LOADED: ./nvim/after/plugin/undotree.lua')
+if (printLoadingAndLoaded == true) then print('LOADED: ./nvim/after/plugin/undotree.lua') end
