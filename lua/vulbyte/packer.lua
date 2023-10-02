@@ -173,7 +173,7 @@ local function setupPacker()
         --this allows you to see what treesitter sees, helping massively
         --with making stylistic mods to vim
         if (printLoadingAndLoaded == true) then print("LOADING: playground") end
-        use('nvim-treesitter/playground')
+        --use('nvim-treesitter/playground')
         if (printLoadingAndLoaded == true) then print("LOADED: playground") end
 
         -- Q
