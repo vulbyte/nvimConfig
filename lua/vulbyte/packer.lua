@@ -36,6 +36,15 @@ local function setupPacker()
 
         -- A
 
+        if (printLoadingAndLoaded == true) then print('LOADING: aerial') end
+        use({
+            "stevearc/aerial.nvim",
+            config = function()
+                require("aerial").setup()
+            end,
+        })
+        if (printLoadingAndLoaded == true) then print('LOADED: aerial') end
+
         -- print("LOADING: 'prabirshrestha/asyncomplete.vim'")
         -- use('prabirshrestha/asyncomplete.vim')
         -- use('yami-beta/asyncomplete-omni.vim')
@@ -221,7 +230,7 @@ local function setupPacker()
         --fuzzy finder
         if (printLoadingAndLoaded == true) then print('LOADING: telescope') end
         use {
-            'nvim-telescope/telescope.nvim', tag = '0.1.1',
+            'nvim-telescope/telescope.nvim', tag = '0.1.4',
             -- or                            , branch = '0.1.x',
             requires = { { 'nvim-lua/plenary.nvim' } }
         }
@@ -265,3 +274,4 @@ if (printLoadingAndLoaded == true) then print('LOADED PLACKER & PLUGINS') end
 
 if (printLoadingAndLoaded == true) then print('LOADED:-- ./nvim/lua/vulbute/packer.lua') end
 -- End of configuration file
+--

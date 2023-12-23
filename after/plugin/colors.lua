@@ -16,6 +16,8 @@ function ColorSchemeDark(color)
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
     vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
+    -- vim.cmd('highlight NightfoxRnu guibg=#ff0000 guifg=#ffffff')
+
     require('nightfox').setup({ palettes = palettes })
 end
 
