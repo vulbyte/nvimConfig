@@ -27,6 +27,28 @@ vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")     -- jump to prev error in qu
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz") -- jump to next location then center.
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz") -- jump to prev location then center.
 
+--gD -> gd in new tab
+-- vim.api.nvim_buf_set_keymap(bufnr, "n", "gft", "<cmd>tab split | lua vim.lsp.buf.definition()<CR>", opts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
+
+vim.keymap.set('n', 'gD', function()
+    local org_path = vim.api.nvim_buf_get_name(0)
+    --gd
+    vim.api.nvim_command("normal gd")
+    --wait for LSPS response
+    vim.wait(100, function() end)
+
+    local new_path = vim.api.nvim_buf_get_name(0)
+    if not (org_path == new_path) then
+        -- create new tab for the og file
+        vim.api.nvim_command("0tabnew %")
+        --restore cursor position
+        vim.api.nvim_command("b " .. org_path)
+        vim.api.nvim_command('normal! `"')
+        --switch to the og tab
+        vim.api.nvim_command("normal! gt")
+    end
+end, bufopts)
 
 vim.keymap.set(
     "n",
