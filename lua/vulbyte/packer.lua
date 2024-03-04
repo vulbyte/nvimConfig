@@ -227,7 +227,25 @@ local function setupPacker()
         vim.cmd('colorscheme carbonfox')
         if (printLoadingAndLoaded == true) then print('LOADED: THEME') end
 
-        --fuzzy finder
+
+        if (printLoadingAndLoaded == true) then print('LOADING: todo-comments') end
+        use {
+            "folke/todo-comments.nvim",
+            requires = "nvim-lua/plenary.nvim",
+            config = function() require("todo-comments").setup {} end
+        }
+        -- the aboove plugin adds this functionality
+        -- PERF: yepp
+        -- HACK: yeeperz
+        -- TODO: thing
+        -- NOTE: other thing
+        -- FIX: this one bothers me
+        -- WARNING: i ate your chips
+        -- PERF: this is a bottleneck, plz fix
+        --
+        if (printLoadingAndLoaded == true) then print('LOADED: todo-comments') end
+
+        -- telescope
         if (printLoadingAndLoaded == true) then print('LOADING: telescope') end
         use {
             'nvim-telescope/telescope.nvim', tag = '0.1.4',
@@ -250,6 +268,9 @@ local function setupPacker()
         if (printLoadingAndLoaded == true) then print("LOADED: undotree") end
 
         -- V
+        if (printLoadingAndLoaded == true) then print("LOADING: vim-be-good") end
+        use('ThePrimeagen/vim-be-good')
+        if (printLoadingAndLoaded == true) then print("LOADED: vim-be-good") end
 
         --adds multi cursor support to vim
         if (printLoadingAndLoaded == true) then print("LOADING: vim-visual-multi") end
@@ -262,7 +283,7 @@ local function setupPacker()
 
         -- Y
 
-        --   Z
+        -- Z
     end) --
 end      --
 

@@ -71,6 +71,7 @@ vim.keymap.set('n', 'gF', function()
     end
 end, bufopts)
 
+--find and replace under cursor
 vim.keymap.set(
     "n",
     "<leader>s",

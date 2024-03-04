@@ -5,7 +5,7 @@ if (printLoadingAndLoaded == true) then print('LOADING: .nvim/after/plugin/lsp.l
 local lsp = require('lsp-zero').preset({})
 
 lsp.on_attach(function(client, bufnr)
-	lsp.default_keymaps({ buffer = bufnr })
+    lsp.default_keymaps({ buffer = bufnr })
 end)
 
 -- (Optional) Configure lua language server for neovim
@@ -29,6 +29,15 @@ vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {
 --        },
 --    },
 --}
+require 'lspconfig'.rust_analyzer.setup {
+    settings = {
+        ['rust-analyzer'] = {
+            diagnostics = {
+                enable = true,
+            }
+        }
+    }
+}
 
 lsp.setup()
 if (printLoadingAndLoaded == true) then print('LOADED: .nvim/after/plugin/lsp.lua') end
