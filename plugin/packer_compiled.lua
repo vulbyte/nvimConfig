@@ -155,6 +155,11 @@ _G.packer_plugins = {
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
   },
+  ["oil.nvim"] = {
+    loaded = true,
+    path = "/Users/insert/.local/share/nvim/site/pack/packer/start/oil.nvim",
+    url = "https://github.com/stevearc/oil.nvim"
+  },
   ["omnisharp-vim"] = {
     loaded = true,
     path = "/Users/insert/.local/share/nvim/site/pack/packer/start/omnisharp-vim",

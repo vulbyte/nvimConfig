@@ -27,7 +27,8 @@ local function setupPacker()
         use 'wbthomason/packer.nvim'
         if (printLoadingAndLoaded == true) then print('LOADED: packer') end
 
-        -- ALPHABETICALLY SORTED UNLESS SPECIFED
+        -- NOTE: ALPHABETICALLY SORTED UNLESS SPECIFED
+        --
         -- NOTE: if the plugin starts with the name "vim"
         --       or "nvim" the plugin will be sorted by
         --       next name.
@@ -169,13 +170,14 @@ local function setupPacker()
 
         -- O
 
-        --print("LOADING: omnisharp-roslyn")
-        --use('OmniSharp/omnisharp-roslyn')
-        --print("LOADED: omnisharp-roslyn")
-
         if (printLoadingAndLoaded == true) then print("LOADING: omnisharp-vim") end
         use('OmniSharp/omnisharp-vim')
         if (printLoadingAndLoaded == true) then print("LOADED: omnisharp-vim") end
+
+
+        if (printLoadingAndLoaded == true) then print("LOADING: oil.nvim") end
+        use('stevearc/oil.nvim')
+        if (printLoadingAndLoaded == true) then print("LOADED: oil.nvim") end
 
         -- P
 

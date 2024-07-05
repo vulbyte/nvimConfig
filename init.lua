@@ -36,5 +36,23 @@ if (printLoadingAndLoaded == true) then
     print("nLOADED: ./nvim/init.lua")
 end
 
+---@diagnostic disable-next-line: missing-fields
+require('nvim-treesitter.configs').setup {
+    ensure_installed = { 'gdscript', 'godot_resource', 'gdshader'},
+    auto_install = true,
+    highelight = {enable = true},
+    indent = {enable = true},
+}
+
+require('lspconfig').gdscript.setup{
+    on_attach = on_attach,
+    flags = {
+        debounce_text_changes = 150,
+    }
+}
+
+vim.cmd('filetype on')
+vim.cmd('filetype plugin on')
+vim.cmd('filetype indent on')
 
 return printLoadingAndLoaded

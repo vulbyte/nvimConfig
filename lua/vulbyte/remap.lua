@@ -18,16 +18,16 @@ vim.keymap.set('x', '<leader>p', "\"_dp")     -- keeps copied thing in buffer
 
 vim.keymap.set("v", '<leader>y', "\"+y")      -- yanks to system clipboard
 
---below allows you to swap projects via tmux (diff
+--NOTE: below allows you to swap projects via tmux (diff
 vim.keymap.set('n', '<C-f>', '<cmd>silent !tmux neww tmux-sessionizer<CR>')
 
---add quick fix list from @28:39?
+--BUG: add quick fix list from @28:39?
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")     -- jump to next error in quickfix, then center.
 vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")     -- jump to prev error in quickfix, then center.
 vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz") -- jump to next location then center.
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz") -- jump to prev location then center.
 
---gD -> gd in new tab
+--NOTE: gD -> gd in new tab
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 
 vim.keymap.set('n', 'gD', function()
@@ -49,7 +49,7 @@ vim.keymap.set('n', 'gD', function()
     end
 end, bufopts)
 
---gF -> gf in new tab
+--NOTE: gF -> gf in new tab
 vim.keymap.set('n', 'gf', vim.lsp.buf.definition, bufopts)
 
 vim.keymap.set('n', 'gF', function()
@@ -71,7 +71,7 @@ vim.keymap.set('n', 'gF', function()
     end
 end, bufopts)
 
---find and replace under cursor
+--NOTE: find and replace under cursor
 vim.keymap.set(
     "n",
     "<leader>s",
@@ -80,7 +80,7 @@ vim.keymap.set(
 
 vim.g.user_emmet_leader_key = ("<C-Y>") --sets emmet hotkey to <C-(var)>,
 
--- delete all marks
+--NOTE: delete all marks
 function DeleteAllMarks()                             --funciton for marks
     vim.cmd [[delmarks a-zA-Z0-9"'\?/<>&*();:~\-_=+]] --delte all marks
     print("all marks deleted")                        -- tell the user what they did

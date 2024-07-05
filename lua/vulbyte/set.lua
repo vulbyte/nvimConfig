@@ -7,18 +7,19 @@ vim.opt.termguicolors = true -- enable terminal colors
 vim.opt.nu = true            --line numbers
 vim.opt.rnu = true           --relative line numbers
 
-vim.opt.tabstop = 4          -- how a tab is displayed
-vim.opt.softtabstop = 4      -- per tab press
-vim.opt.shiftwidth = 4       -- auto adjusted tab spacing
-vim.opt.expandtab = true     -- coverts tab spaces to " " spaces ie, 1 tab = 4x" "
+-- NOTE: tab settings should be on a file by file basis
+--vim.opt.tabstop = 4          -- how a tab is displayed
+--vim.opt.softtabstop = 4      -- per tab press
+--vim.opt.shiftwidth = 4       -- auto adjusted tab spacing
+--vim.opt.expandtab = true     -- coverts tab spaces to " " spaces ie, 1 tab = 4x" "
 
 vim.opt.smartindent = true   -- automagicly indent
 
 vim.opt.wrap = true          -- should words wrap, if false will go off screen
 vim.opt.linebreak = true     -- should they wrap on first char, or based on word?
 
-vim.opt.foldmethod =
-"marker"                                               -- set fold method to marker, what this will do is cheack for  {{{1 }}}1 and fold everything with matching syntax
+vim.opt.foldmethod = "marker"
+-- set fold method to marker, what this will do is cheack for  {{{1 }}}1 and fold everything with matching syntax
 
 vim.opt.swapfile = true                                --use swapfile for changes? (if true, wll create a swap file will be used which can be nice in the case of crashes)
 vim.opt.backup = false                                 -- creates backupfiles ending with a "~"
@@ -34,5 +35,16 @@ vim.opt.signcolumn =
 "auto"                                                 -- pillar used to show errors and the like. yes = always show, no = never show, auto = show if any exist
 vim.opt.isfname:append("@-@")                          -- This line configures Neovim to include the characters "@-@" as valid characters in file names when performing certain operations like text object selection or file navigation.
 
+--###########################################################################
+-- not centered
+--                                centered
+-- centered
+--###########################################################################
+
+-- spell check
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+vim.cmd([[highlight SpellBad cterm=underline ctermfg=Red guisp=Red gui=undercurl ]])
+-- vim.cmd("setlocal spell spelllang=en_us")
 
 vim.opt.colorcolumn = "75" -- the amount of pillars it takes for the bar to appear
